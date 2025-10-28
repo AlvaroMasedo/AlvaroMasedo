@@ -1,0 +1,130 @@
+.lightsaber{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    bottom: 3em;
+}
+.lightsaber .bottom{
+    width: 3em;
+    height: 11em;
+    background: #c4c4c4;
+    position: relative;
+}
+.lightsaber .bottom::before{
+    content: "";
+    width: 130%;
+    height: 2em;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: inherit;
+}
+.lightsaber .bottom::after{
+    content: "";
+    width: 100%;
+    height: 3em;
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333333;
+}
+.lightsaber .middle{
+    width: 2.6em;
+    height: 6em;
+    background: 
+    linear-gradient(
+        0deg, #333333 8%, #8d8d8d 10%, #333333 12%,
+        #333333 22%, #8d8d8d 24%, #333333 26%,
+        #333333 36%, #8d8d8d 38%, #333333 40%,
+        #333333 50%, #8d8d8d 52%, #333333 54%,
+        #333333 64%, #8d8d8d 66%, #333333 68%,
+        #333333 78%, #8d8d8d 80%, #333333 82%);
+        margin: 0 auto;
+        position: relative;
+}
+.lightsaber .middle::before{
+    content: "";
+    width: 70%;
+    height: 1em;
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #c4c4c4c4;
+}
+.lightsaber .top{
+    background: #c4c4c4c4;
+    height: 1em;
+    width: 3em;
+    margin-bottom: 0.8em;
+    border-radius: 0 0 1em 1em;
+    position: relative;
+}
+.lightsaber .top::before{
+    content: "";
+    width: 120%;
+    height: 0.5em;
+    position: absolute;
+    top: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lightsaber .bottom,
+.lightsaber .bottom::before,
+.lightsaber .top,
+.lightsaber .top::before,
+.lightsaber .middle::before {
+    background: 
+        linear-gradient(
+            90deg, rgba(126,126,126,1) 0%,
+            rgba(227,227,227,1) 
+            20%, rgba(120,120,120,1)
+            50%, rgba(227,227,227,1)
+            80%, rgba(126,126,126,1) 100%);
+}
+.lightsaber .blade{
+    height: 0;
+    width: 1.8em;
+    background: #fff;
+    border-radius: 2em 2em 0 0;
+    margin: 0 auto;
+    position: relative;
+    transition: 0.33s;
+}
+.lightsaber .blade::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #00ff4c;
+    filter: blur(15px);
+    z-index: -1;
+}
+.lightsaber .bottom .switchbutton{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: #4e0202;
+    cursor: pointer;
+}
+.lightsaber .blade-height{
+    height: 50em;
+}
+
+/*
+<div class="lightsaber">
+        <div class="blade"></div>
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom">
+            <div class="switchbutton"></div>
+        </div>
+    </div>
+*/

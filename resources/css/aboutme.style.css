@@ -21,16 +21,23 @@ header {
 
 /* Logo */
 .icon-logo {
-    margin-left: 360px;
     width: 90px;
     height: auto;
     border: 6px solid rgb(71, 60, 77);
     border-radius: 50%;
 }
+
 .icon-logo:hover {
     transform: scale(1.1);
 }
 
+.logo-a {
+    text-decoration: none;
+    width: 100px;
+    margin-left: 360px;
+    border: 0;
+    border-radius: 100%;
+}
 /* Menú */
 .ul-header {
     list-style: none;
@@ -56,7 +63,7 @@ header {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Quicksand, sans-serif;
 }
 
 .ul-header li:hover {
@@ -64,11 +71,38 @@ header {
 }
 
 
-/*Banner Image*/
-.banner-img {
-    width: 100%;
-    height: 660px;
-    object-fit: cover;
-    object-position: center;
-    margin-top: -20px;
+/* Footer Styles */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 15px 120px;
+    background-color: rgb(61, 55, 65);
+    color: white;
+    font-family: Quicksand, sans-serif;
+}
+
+.ul-footer {
+    list-style: none;
+    padding: 0;
+}
+
+.ul-footer li {
+    margin: 8px 0;
+}
+
+.ul-footer img {
+    width: auto;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.ul-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.ul-footer a:hover {
+    text-decoration: underline;
 }

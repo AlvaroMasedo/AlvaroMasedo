@@ -38,6 +38,7 @@ header {
     border: 0;
     border-radius: 100%;
 }
+
 /* Menú */
 .ul-header {
     list-style: none;
@@ -322,6 +323,170 @@ header {
     background: rgba(0, 255, 255, 0.15);
     text-shadow: 0 0 8px #00e5ff;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+/* Proyects Section */
+.section-projects {
+    position: relative;
+    padding: clamp(48px, 7vw, 96px) 0;
+    background: linear-gradient(180deg, #17161a 0%, #141318 100%);
+    color: #fff;
+    overflow: hidden;
+    font-family: Quicksand, sans-serif;
+}
+
+.section-projects::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10%;
+    background:
+        linear-gradient(45deg, rgba(255, 255, 255, .03) 25%, transparent 25% 50%, rgba(255, 255, 255, .03) 50% 75%, transparent 75%) 0 0/24px 24px;
+    opacity: .4;
+    pointer-events: none;
+    filter: blur(0.3px);
+}
+
+.container-projects {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.head-projects {
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.head-projects h2 {
+    font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.head-projects p {
+    color: #cfcfd6;
+    margin: 8px 0 18px;
+}
+
+.drs-projects {
+    display: block;
+    height: 4px;
+    width: 190px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #ff2a2a, #ff7b7b, #ff2a2a);
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(255, 42, 42, .6);
+}
+
+/* Grid de tarjetas */
+.grid-projects {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Tarjeta base */
+.f1-card {
+    position: relative;
+    isolation: isolate;
+    background: #1b1a20;
+    border-radius: 18px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+    outline: 1px solid rgba(255, 255, 255, .05);
+    transition: transform .2s ease, outline-color .2s ease;
+}
+
+.f1-card:hover {
+    transform: translateY(-4px);
+    outline-color: rgba(255, 255, 255, .12);
+}
+
+.projects-topline {
+    height: 6px;
+    border-radius: 8px;
+    margin: -6px 0 12px;
+    background: linear-gradient(90deg, #ff2a2a, #ffae00);
+}
+
+/* Contenido */
+.f1-card h3 {
+    margin: 6px 0 6px;
+    font-size: 20px;
+    letter-spacing: .06em;
+}
+
+.f1-card .desc {
+    color: #c9c9cf;
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.badges span {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #24232b;
+    color: #e9e9ef;
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+/* Botón */
+.btn-outline {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    color: #fff;
+    text-decoration: none;
+    transition: .2s;
+    font-weight: 600;
+}
+
+.btn-outline:hover {
+    border-color: #ff3b3b;
+    box-shadow: 0 0 12px rgba(255, 60, 60, .35);
+}
+
+/* Skins por equipo (solo cambia la franja superior y acentos) */
+.team-ferrari .projects-topline {
+    background: linear-gradient(90deg, #dc0000, #ffb000);
+    box-shadow: 0 0 12px rgba(255, 60, 60, .6);
+}
+
+.team-astonMartin .projects-topline {
+    background: linear-gradient(90deg, #039c55, #44e7b1);
+    box-shadow: 0 0 12px rgba(28, 194, 97, 0.6);
+}
+
+.team-redBull .projects-topline {
+    background: linear-gradient(90deg, #001b75, #ffde00, #d50000);
+    box-shadow: 0 0 12px rgba(15, 3, 121, 0.6);
+}
+
+/* Detalle “speed line” al hover */
+.f1-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -1% 0 -1%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    opacity: 0;
+    transition: .2s;
+}
+
+.f1-card:hover::after {
+    opacity: 1;
 }
 
 /* Footer Styles */
